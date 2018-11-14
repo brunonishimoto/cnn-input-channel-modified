@@ -10,7 +10,7 @@ def rescale_g_channel():
   for dataset in os.listdir(root):
     dataset_dir = dataset
     for category in os.listdir(os.path.join(root, dataset_dir)):
-
+      for image in os.listdir(os.path.join(root,))
 
   img = Image.open(filename)
   _, g, _ = img.split()

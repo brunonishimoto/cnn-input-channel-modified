@@ -32,24 +32,24 @@ print(r.shape)
 r_mod.save('r.png')
 g.save('g.png')
 b.save('b.png')
-# g = np.array(img)
-# g_tmp = g
-# g[:, :, 1] = np.flip(g[:, :, 1], 0)
-# g = Image.fromarray(g)
-# g.save('g.png')
-# b = np.array(img)
-# b_tmp = b
-# b[:, :, 0] *= 0
-# b[:, :, 1] *= 0
-# b[:, :, 2] = np.flip(b[:, :, 2], 0)
-# b = Image.fromarray(b)
-# b.save('b.png')
-# g = g.transpose(Image.FLIP_LEFT_RIGHT)
-# g.save('g1.png')
-# b.save('b.png')
-# final = r_tmp
-# final[:, :, 1] = g_tmp[:, :, 1]
-# final[:, :, 2] = b_tmp[:, :, 2]
-# final = Image.fromarray(final)
-# final.save('final.png')
+g = np.array(img)
+g_tmp = g
+g[:, :, 1] = np.flip(g[:, :, 1], 0)
+g = Image.fromarray(g)
+g.save('g.png')
+b = np.array(img)
+b_tmp = b
+b[:, :, 0] *= 0
+b[:, :, 1] *= 0
+b[:, :, 2] = np.flip(b[:, :, 2], 0)
+b = Image.fromarray(b)
+b.save('b.png')
+g = g.transpose(Image.FLIP_LEFT_RIGHT)
+g.save('g1.png')
+b.save('b.png')
+final = r_tmp
+final[:, :, 1] = g_tmp[:, :, 1]
+final[:, :, 2] = b_tmp[:, :, 2]
+final = Image.fromarray(final)
+final.save('final.png')
 resp.release_conn()
