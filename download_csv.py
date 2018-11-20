@@ -31,7 +31,7 @@ def maybe_download(url, filename, force=False):
     os.makedirs(directory, exist_ok=True)
   if force or not os.path.exists(filename):
     try:
-      print('Downloading %s', % (filename))
+      print('Downloading ' + filename)
       urlretrieve(url, filename, reporthook=download_progress_hook)
       print('Finished download')
     except:
